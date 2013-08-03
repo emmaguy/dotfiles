@@ -1,0 +1,24 @@
+[user]
+	email = emmag87@gmail.com
+	name = Emma Guy
+[alias]
+	st = status -sb 
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow bold
+	remote = green bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+new = green bold
+[color "status"]
+	added = yellow bold
+	changed = red bold
+	untracked = cyan bold
+[push]
+	default = current
