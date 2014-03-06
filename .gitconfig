@@ -22,17 +22,16 @@
 	untracked = cyan bold
 [push]
 	default = current
+[merge]
+        keepBackup = false
+        tool = custom
+        
+[mergetool "custom"]
+        cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+        keepTemporaries = false
+        trustExitCode = false
+        keepBackup = false
 [diff]
     tool = p4merge
-[difftool]
-	prompt = false
 [difftool "p4merge"]
-    cmd = "p4merge.exe $LOCAL $REMOTE"
-[merge]
-    tool = p4merge
-[mergetool]
-	prompt = false
-[mergetool "p4merge"]
-    cmd = "p4merge.exe $BASE $LOCAL $REMOTE $MERGED"
-    trustExitCode = true
-    keepBackup = false
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
