@@ -4,7 +4,7 @@
 [alias]
 	s = status -sb 								# short, with branch info
 	ds = stash show -p stash@{0}						# diff against the top of the stash
-	dh = git diff HEAD^ HEAD						# diff last commit with version before it
+	dh = diff HEAD^ HEAD							# diff last commit with version before it
 	psub = submodule update --init --recursive				# update submodules
 	ri = rm --cached `git ls-files -i --exclude-from=.gitignore`		# files in the repo that are now excluded by the gitignore
 [color]
