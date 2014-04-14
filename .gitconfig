@@ -2,7 +2,7 @@
 	email = emmag87@gmail.com
 	name = Emma Guy
 [alias]
-	s = status -sb 								# short, with branch info
+	s = -c color.status=always status -sb 								# short, with branch info
 	ds = stash show -p stash@{0}						# diff against the top of the stash
 	dh = diff HEAD^ HEAD							# diff last commit with version before it
 	psub = submodule update --init --recursive				# update submodules
