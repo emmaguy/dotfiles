@@ -2,29 +2,12 @@
 	email = emmag87@gmail.com
 	name = Emma Guy
 [alias]
-	s = -c color.status=always status -sb 								# short, with branch info
-	snw = ! git -c color.status=always status -sb | ~/nw				# short, piped into numberwang
+	s = -c color.status=always status -sb 					# short, with branch info
+	snw = ! git -c color.status=always status -sb | ~/nw			# short, piped into https://github.com/robbiev/numberwang
 	ds = stash show -p stash@{0}						# diff against the top of the stash
 	dh = diff HEAD^ HEAD							# diff last commit with version before it
 	psub = submodule update --init --recursive				# update submodules
-	ri = rm --cached `git ls-files -i --exclude-from=.gitignore`		# files in the repo that are now excluded by the gitignore
-[color]
-	branch = auto
-	diff = auto
-	status = auto
-[color "branch"]
-	current = yellow reverse
-	local = yellow bold
-	remote = green bold
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-[color "status"]
-	added = yellow bold
-	changed = red bold
-	untracked = cyan bold
+
 [push]
 	default = current
 [merge]
