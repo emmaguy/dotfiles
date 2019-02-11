@@ -1,26 +1,11 @@
 [user]
-	email = emmag87@gmail.com
-	name = Emma Guy
+	email = emmag@monzo.com
+	name = Emma Vanbrabant
 [alias]
 	s = -c color.status=always status -sb 					# short, with branch info
-	snw = ! git -c color.status=always status -sb | ~/nw			# short, piped into https://github.com/robbiev/numberwang
+	snw = ! git -c color.status=always status -sb | ~/go/bin/numberwang	# short, piped into https://github.com/robbiev/numberwang
 	ds = stash show -p stash@{0}						# diff against the top of the stash
 	dh = diff HEAD^ HEAD							# diff last commit with version before it
 	psub = submodule update --init --recursive				# update submodules
-
-[push]
-	default = current
-[merge]
-        keepBackup = false
-        tool = custom
-[mergetool "custom"]
-        cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
-        keepTemporaries = false
-        trustExitCode = false
-        keepBackup = false
-        prompt = false
-[diff]
-    tool = p4merge
-[difftool "p4merge"]
-	prompt = false
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+	bbd = branch --sort=committerdate					# branches ordered
+	
